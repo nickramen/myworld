@@ -26,80 +26,356 @@
     <link href="https://fonts.googleapis.com/css2?family=Braah+One&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="content-fluid" id="backdrop" style="text-align: center;">
+    <div class="content-fluid" id="backdrop">
         <div class="row">
-            <div class="col-lg-10 offset-lg-1" style="padding: 22px;" >
+            <div class="col-lg-3 offset-lg-1">
                 <div id="profilepic-container" class="profilepic-container">
                     <a id="profilepic-href"><img id="profilepic" src="assets/images/nicole.jpg"></a>
                 </div>
                 <h1 id="myname" style="display: block;">Nicole Ramos</h1>
-                <p class="category" style="display: block; font-size: 32px; text-align: center;">
+                <p class="category" style="display: block; font-size: 32px;">
                     💻 👕 🌎 ✈️ 🎨 🍕
-                    <br>
-                    Programmer, Designer and Entrepreneur
                     <br><br>
+                    <ul style="font-size: 32px;">
+                        <li>Programmer</li>
+                        <li>Designer</li>
+                        <li>Entrepreneur</li>
+                    </ul>
+                    <br>
                 </p>
             </div>
-            <div class="col-lg-10 offset-lg-1">
-                <div class="content" style="display: flex; justify-content: space-between;">
-                    <div class="thumbnail"><img src="assets/images/nickramen.png">
-                        
+            <div class="col-lg-6" >
+                <div id="content">
+                    <h1 id="myname" style="display: block;">This is my work</h1>
+                    <div class="projectgroup">
+                        <div class="thumbnail size" id="nickramenThumbnail" name="nickramenTab" onclick="showTab('nickramenTab')"><img src="assets/images/nickramen.png"></div>
+                        <div class="thumbnail" id="vitadevsThumbnail" name="vitadevsTab" onclick="showTab('vitadevsTab')"><img src="assets/images/vitadevs.png"></div>
+                        <div class="thumbnail" id="estudimateThumbnail" name="estudimateTab" onclick="showTab('estudimateTab')"><img src="assets/images/estudimate.png"></div>
+                        <div class="thumbnail" id="manlebThumbnail" name="manlebTab" onclick="showTab('manlebTab')"><img src="assets/images/manleb.png"></div>
+                        <div class="thumbnail" id="ramendigitalThumbnail" name="ramendigitalTab" onclick="showTab('ramendigitalTab')"><img src="assets/images/ramendigital.png"></div>
                     </div>
-                    <div class="thumbnail"><img src="assets/images/vitadevs.png"></div>
-                    <div class="thumbnail"><img src="assets/images/estudimate.png"></div>
-                    <div class="thumbnail"><img src="assets/images/manleb.png"></div>
-                    <div class="thumbnail"><img src="assets/images/ramendigital.png"></div>
                 </div>
-                <!-- <div id="content">
-                    <h3 class="title-h3" style="font-family: 'Braah One', sans-serif;">My World</h3>
-                    <p class="category" style="font-size: 24px;">
-                        Nickramen - My Alter Ego (The Programmer)
-                    </p>
-                    <div class="thumbnail"><img src="../assets/images/nickramen.jpg"></div>
-                    
-                    <a class="link" href="https://nickramen.com/" target="_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
-                    <a class="link" href="https://www.linkedin.com/in/nickramen/" target="_blank"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-                    <a class="link" href="https://www.youtube.com/@nickramen2.0" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a>
-                    <a class="link" href="https://twitter.com/_nickramen_" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                    <a class="link" href="https://github.com/nickramen" target="_blank"><i class="fab fa-github"  aria-hidden="true"></i></a>
-                    
-                    <p class="category" style="font-size: 24px;">
-                        MANLEB - My Clothing Brand
-                    </p>
-                    <div class="thumbnail"><img src="../assets/images/manleb.png"></div>
-                    <a class="link" href="https://manleb.com/" target="_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
-                    <a class="link" href="https://instagram.com/its.manleb/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
 
-                    <p class="category" style="font-size: 24px;">
-                        Ramen Digital - My Airbnb Marketing Agency
-                    </p>
-                    <div class="thumbnail"><img src="../assets/images/ramendigital.png"></div>
-                    <a class="link" href="https://ramendigital.com/" target="_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
-                    <a class="link" href="https://instagram.com/ramendigital.agency" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                <div class="content">
+                    <!-- Content for nickramen -->
+                    <div class="thecontent tab" id="nickramenTab" style="display: block;">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="thetitle boxBorder">
+                                    <h2>nickramen</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8 nickramenLargeDiv" style="display: flex;">
+                                <div class="thedescription boxBorder">
+                                    <h3>My Alter Ego (The Programmer)</h3>
+                                    <p>
+                                        I'm Nicole but @nickramen is my alter ego whenever I surf the internet🏄.
+                                        I am a software development specialist. I love programming, learning languages and art. 
+                                        Connecting with people really is something i enjoy. I believe we can all contribute to 
+                                        make the world a better place. As a programmer, I want to make my part using code to make 
+                                        a change and help people live easier and better lives. That is my ultimate profesional goal.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-4 nickramenSmallDiv" style="display: flex;">
+                                <div class="thesocialmedia boxBorder">
+                                    <h3>Social Media</h3>
+                                    <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+                                        <a class="link" href="https://nickramen.com/" target="_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
+                                        <a class="link" href="https://www.linkedin.com/in/nickramen/" target="_blank"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                                        <a class="link" href="https://www.youtube.com/@nickramen2.0" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                                        <a class="link" href="https://twitter.com/_nickramen_" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                                        <a class="link" href="https://github.com/nickramen" target="_blank"><i class="fab fa-github"  aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 smallDiv" style="display: flex;">
+                                <div class="theage boxBorder">
+                                    <h3>Kickoff</h3>
+                                    <p>
+                                        I started learning programming at school, around 2017 or 2018. Before graduating I applied for a scholarchip
+                                        to attend a Programming Academy that offered an intense software development course. I was able to pass the
+                                        entrance exams and completed the course months later. 
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-8 largeDiv" style="display: flex;">
+                                <div class="thestory boxBorder">
+                                    <h3>About</h3>
+                                    <p>
+                                        🐍 I'm currently learning Python <br>
+                                        ⚡ Fun fact: I'm 22 years old and I love pizza! <br>
+                                        🧠 These days I am very interesed in Machine Learning and AI.<br>
+                                        🌟 Find my resume at my website. I'm also trying to writ a blog.
+                                        <!-- Fix the width issue -->
+                                        <a class="link2"></a><a class="link2"></a><a class="link2"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Content for nickramen -->
 
-                    <p class="category" style="font-size: 24px;">
-                        VitaDevs - My IT Startup
-                    </p>
-                    <div class="thumbnail"><img src="../assets/images/vitadevs.png"></div>
-                    <a class="link" href="https://vitadevs.com/" target="_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
-                    <a class="link" href="https://instagram.com/vitadevs/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <!-- Content for vitadevs  -->
+                    <div class="thecontent tab" id="vitadevsTab">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="thetitle boxBorder">
+                                    <h2>VitaDevs</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8 largeDiv" style="display: flex;">
+                                <div class="thedescription boxBorder">
+                                    <h3>My IT Startup/ Software Company</h3>
+                                    <p>
+                                        After I graduated from the Programming Academy I attented to, I was able to get a couple of jobs but, 
+                                        ever since I was a kid I always dreamed about having my own company and being my own boss. Out of all
+                                        my skillset, programming is the one I have developed more along the way. I partnered up with my friend,
+                                        <a href="https://www.linkedin.com/in/axel-gallegos-m/"><b>@Axel,</b></a> and we started getting clients.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-4 smallDiv" style="display: flex;">
+                                <div class="thesocialmedia boxBorder">
+                                    <h3>Social Media</h3>
+                                    <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+                                        <a class="link" href="https://vitadevs.com/" target="_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
+                                        <a class="link" href="https://instagram.com/vitadevs/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                                        <a class="link" href="https://twitter.com/_VitaDevs_" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                                        <a class="link" href="https://www.facebook.com/vitadevs" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                                        <a class="link" href="https://github.com/vitadevs" target="_blank"><i class="fab fa-github"  aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 smallDiv" style="display: flex;">
+                                <div class="theage boxBorder">
+                                    <h3>Kickoff</h3>
+                                    <p>
+                                        Even though we started talking about scaling this project by the end of 2022, 
+                                        we actually started running as a startup by April, 2023.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-8 largeDiv" style="display: flex;">
+                                <div class="thestory boxBorder">
+                                    <h3>About</h3>
+                                    <p>
+                                        VitaDevs is a software company that is committed to building a world where 
+                                        technology is accessible and user-friendly. Focused on customer satisfaction 
+                                        providing solutions that meet their clients needs. Founded by 
+                                        <a href="https://www.linkedin.com/in/axel-gallegos-m/"><b>@Axel Gallegos</b></a> and
+                                        <a href="https://www.linkedin.com/in/nickramen/"><b>@Nicole Ramos</b></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Content for vitadevs -->
 
-                    <p class="category" style="font-size: 24px;">
-                        Estudimate - Learn Languages with Me
-                    </p>
-                    <a class="thumbnail"><img src="../assets/images/estudimate.png"></a>
-                    <a class="link" href="https://estudimate.com/" target="_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
-                </div> -->
+                    <!-- Content for estudimateInfocard -->
+                    <div class="thecontent tab" id="estudimateTab">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="thetitle boxBorder">
+                                    <h2>Estudimate <span style="font-size: 18px; font-style: italic;">(Project Under Construction)</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8 largeDiv" style="display: flex;">
+                                <div class="thedescription boxBorder">
+                                    <h3>My Language Learning Platform</h3>
+                                    <p>
+                                        I have always been passionate about learning languages. I learned English  at school since the age of 4
+                                        and kept on developing my communication skills in that language. When I turned aroung 9 or 10 years old, 
+                                        I started to pay attention to the lyrics of the pop songs I liked and not just sing in an unexistent English.
+                                        I was so hyped up after actually understanding the lyrics. On 2018, I learned Korean by myself for a whole year, 
+                                        and was able to take it to a conversational level. Today, I am capable of handle conversations with Korean natives to a certain level.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-4 smallDiv" style="display: flex;">
+                                <div class="thesocialmedia boxBorder">
+                                    <h3>Social Media</h3>
+                                    <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+                                        <a class="link" href="https://estudimate.com/" target="_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
+                                        <a class="link2"></a>
+                                        <a class="link2"></a>
+                                        <a class="link2"></a>
+                                        <a class="link2"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 smallDiv" style="display: flex;">
+                                <div class="theage boxBorder" style="width: 100%;">
+                                    <h3>Kickoff</h3>
+                                    <p>
+                                        At first, I started working in 2016 as an English tutor for kids younger than me, which I enjoyed because 
+                                        I was earning some pennies at a young age. I've always liked teaching and wanted to help more people.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-8 largeDiv" style="display: flex;">
+                                <div class="thestory boxBorder">
+                                    <h3>About</h3>
+                                    <p>
+                                        Estudimate was born by the beginning of 2023 as a project were people can learn languages for free.
+                                        It gives away many resources and shares the language learning blueprint for every reader that stays
+                                        to read. Students should be able to have enough knowledge to handle convesations with natives by the
+                                        end of the couser. If they want, they can support the platform on Patreon and get access to our
+                                        community of learners, more bonuses, live calls to practice their speaking skills and support from native speakers.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Content for estudimate -->
+
+                    <!-- Content for manleb  -->
+                    <div class="thecontent tab" id="manlebTab">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="thetitle boxBorder">
+                                    <h2>MANLEB <span style="font-size: 18px; font-style: italic;">(Project Under Construction)</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8 largeDiv" style="display: flex;">
+                                <div class="thedescription boxBorder">
+                                    <h3>My Clothing Brand</h3>
+                                    <p>
+                                        This is a project I have been wanting to launch years ago. I love arts and being creative.
+                                        The idea of expressing myself and present part of my identity in form of a clothing style
+                                        has always been very exciting. Last year I started working on some designs and trying out
+                                        printing options. Hopefully I can launch my store very soon!!!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-4 smallDiv" style="display: flex;">
+                                <div class="thesocialmedia boxBorder">
+                                    <h3>Social Media</h3>
+                                    <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+                                        <a class="link" href="https://manleb.com/" target="_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
+                                        <a class="link" href="https://instagram.com/its.manleb/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                                        <a class="link" href="https://www.facebook.com/its.manleb/" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                                        <a class="link2"></a>
+                                        <a class="link2"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 smallDiv" style="display: flex;">
+                                <div class="theage boxBorder">
+                                    <h3>Kickoff</h3>
+                                    <p>
+                                        Comming soon...
+                                    </p>
+                                    <a class="link2"></a>
+                                    <a class="link2"></a>
+                                    <a class="link2"></a>
+                                    <a class="link2"></a>
+                                </div>
+                            </div>
+                            <div class="col-8 largeDiv" style="display: flex;">
+                                <div class="thestory boxBorder">
+                                    <h3>About</h3>
+                                    <p>
+                                        Manleb wants to portrait the image of youth and empowerment in a minimalistic style. 
+                                        The new generation of teens and adults that want to differentiate from the rest.
+                                        For those who choose to live for them and not for others.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Content for manleb -->
+
+                    <!-- Content for ramendigital  -->
+                    <div class="thecontent tab" id="ramendigitalTab">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="thetitle boxBorder">
+                                    <h2>Ramen Digital <span style="font-size: 18px; font-style: italic;">(Launched But Still In Progress)</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8 largeDiv" style="display: flex;">
+                                <div class="thedescription boxBorder">
+                                    <h3>My Social Media Marketing Agency</h3>
+                                    <p>
+                                        We are living exciting event in the history of humanity. Just think about how AI has blown up recently.
+                                        I believe people can grow and scale their businesses using platforms at least 60% of the world's population
+                                        has heard of. Social media is one of the most powerful tools businesses can have but not everyone can blow
+                                        on social media. It does require a someone with a specific skillset. I have been developing skills that can
+                                        allow me to help business grow and get a return on their investment. I'm part of a community of agencies that
+                                        support each other on getting their clients outstanding results.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-4 smallDiv" style="display: flex;">
+                                <div class="thesocialmedia boxBorder">
+                                    <h3>Social Media</h3>
+                                    <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+                                        <a aria-disabled="true" class="link" href="https://ramendigital.agency" target="_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
+                                        <a class="link" href="https://instagram.com/ramendigital.agency" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                                        <a class="link" href="https://www.facebook.com/ramendigital.smma" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                                        <a class="link2"></a>
+                                        <a class="link2"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 smallDiv" style="display: flex;">
+                                <div class="theage boxBorder">
+                                    <h3>Kickoff</h3>
+                                    <p>
+                                        Started on March, 2023 but still on the cooking. More comming soon...
+                                    </p>
+                                    <a class="link2"></a>
+                                    <a class="link2"></a>
+                                    <a class="link2"></a>
+                                    <a class="link2"></a>
+                                </div>
+                            </div>
+                            <div class="col-8 largeDiv" style="display: flex;">
+                                <div class="thestory boxBorder">
+                                    <h3>About</h3>
+                                    <p>
+                                        Ramen Digital helps Airbnb owners to maximize their reach and get more guests.
+                                        Whether we go through the organic or paid path, our one goal is to get you amazing results.
+                                        We can help you from content creation to managing your ads account.  
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Content for ramendigital  -->
+                </div>
+
             </div>
         </div>    
     </div>
 
     
     <!-- Jquery -->
-    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap -->
-    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     <!-- Custom script -->
-    <script src="../assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -1,27 +1,65 @@
-// // Define an array of colors for the sparks
-// var colors = ["#004d7a", "#008793", "#00bf72", "#a8eb12"];
+$(document).ready(function() {
+    adjustDivHeight();
+});
+    
+$(window).resize(function() {
+    adjustDivHeight();
+});
 
-// // Define the number of sparks to create
-// var numSparks = 100;
+// function adjustDivHeight() {
+//     const nickramenLargeDiv = $('.nickramenLargeDiv').outerHeight();
+//     $('.nickramenSmallDiv').css('box-sizing', 'border-box').height(nickramenLargeDiv);
 
-// // Create the sparks
-// for (var i = 0; i < numSparks; i++) {
-//   // Create a new div for the spark
-//   var spark = document.createElement("div");
-//   spark.classList.add("spark");
-  
-//   // Set the color of the spark randomly
-//   var colorIndex = Math.floor(Math.random() * colors.length);
-//   spark.style.backgroundColor = colors[colorIndex];
-  
-//   // Set the position of the spark randomly
-//   spark.style.top = Math.random() * 100 + "%";
-//   spark.style.left = Math.random() * 100 + "%";
-  
-//   // Set the animation delay and duration randomly
-//   spark.style.animationDelay = Math.random() * 2 + "s";
-//   spark.style.animationDuration = Math.random() * 3 + "s";
-  
-//   // Add the spark to the backdrop
-//   document.getElementById("backdrop").appendChild(spark);
+//     const vitadevsLargeDiv = $('.vitadevsLargeDiv').outerHeight();
+//     $('.vitadevsSmallDiv').css('box-sizing', 'border-box').height(vitadevsLargeDiv);
+
+//     const estudimateLargeDiv = $('.estudimateLargeDiv').outerHeight();
+//     $('.estudimateSmallDiv').css('box-sizing', 'border-box').height(estudimateLargeDiv);
+
+//     const manlebLargeDiv = $('.manlebLargeDiv').outerHeight();
+//     $('.manlebSmallDiv').css('box-sizing', 'border-box').height(manlebLargeDiv);
+
+//     const ramendigitalLargeDiv = $('.ramendigitalLargeDiv').outerHeight();
+//     $('.ramendigitalSmallDiv').css('box-sizing', 'border-box').height(ramendigitalLargeDiv);
 // }
+
+
+function showTab(tabId) {
+    // Hide all tabs
+    var tabs = document.getElementsByClassName("tab");
+    var thumbs = document.getElementsByClassName("thumbnail")
+
+    for (var i = 0; i < tabs.length; i++) {
+        tabs[i].style.display = "none";
+        tabs[i].classList.remove("size");
+    }
+    
+    // Show the selected tab
+    var selectedTab = document.getElementById(tabId);
+    selectedTab.style.display = "block";
+    selectedTab.classList.add("size")
+
+    // Find the matching thumbnail
+    for (var j = 0; j < thumbs.length; j++) {
+        if (thumbs[j].getAttribute("name") === tabId) {
+            // Do something with the matching thumbnail, e.g., add a class or modify its style
+            thumbs[j].classList.add("size");
+        } else {
+            // Handle other thumbnails if needed
+            tabs[i].classList.remove("size");
+        }
+    }
+}
+
+function sizeThumb(thumbId) {
+    // Normal size for all thumbs by removing the "size" class
+    var thumbs = document.getElementsByClassName("thumbnail")
+    
+    for (var i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove("size");
+    }
+    
+    // Show the selected tab
+    var selectedThumb = document.getElementById(thumbId);
+    selectedThumb.classList.add("size")
+}
